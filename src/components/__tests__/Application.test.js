@@ -3,8 +3,6 @@ import { getByText, render, cleanup, fireEvent, waitForElement, prettyDOM, getAl
 import Application from "components/Application";
 import axios from "axios";
 
-// jest.mock('axios')
-
 afterEach(cleanup);
 
 describe("Application", () => {
