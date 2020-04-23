@@ -25,4 +25,12 @@ npm run storybook
 
 Main layout with a couple of appointments
 
-file:///home/lee/Pictures/scheduler_pics/Layout.png
+User creating an appointment
+
+User deleting an appointment
+
+Deleting action spinner
+
+Delete confirmation
+
+Delete error
