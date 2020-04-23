@@ -9,7 +9,6 @@ import Confirm from 'components/Appointment/Confirm';
 import Error from 'components/Appointment/Error';
 import useVisulaMode from '../../hooks/useVisualMode';
 
-
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
 const CREATE = "CREATE";
@@ -34,13 +33,13 @@ export default function Appointment(props) {
     back();
   }
 
-  function delayShow() {
-    transition(SHOW);
-  }
+  // function delayShow() {
+  //   transition(SHOW);
+  // }
 
-  function delayEmpty() {
-    transition(EMPTY);
-  }
+  // function delayEmpty() {
+  //   transition(EMPTY);
+  // }
 
   function save(name, interviewer) {
 
@@ -53,7 +52,7 @@ export default function Appointment(props) {
 
     props
       .bookInterview(props.id, interview)
-      .then(() => setTimeout(delayShow, 1000))
+      .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true))
 
   }
@@ -67,7 +66,7 @@ export default function Appointment(props) {
 
     props
       .cancelInterview(props.id)
-      .then(() => setTimeout(delayEmpty, 1000))
+      .then(() => transition(EMPTY))
       .catch(error => transition(ERROR_DELETE, true))
 
   }
@@ -78,7 +77,7 @@ export default function Appointment(props) {
 
   return (
 
-    <article className="appointment" >
+    <article className="appointment" data-testid="appointment">
       <Fragment>
         <Header time={props.time}>
         </Header>
@@ -103,7 +102,7 @@ export default function Appointment(props) {
           />}
         {mode === CONFIRM &&
           <Confirm
-            message={"Delete the appointment?"}
+            message={"Are you sure you would like to delete the appointment?"}
             onConfirm={destroy}
             onCancel={onCancel}
           />

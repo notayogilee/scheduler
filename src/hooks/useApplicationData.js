@@ -9,7 +9,6 @@ export default function useApplicationData() {
     day: "Monday",
     days: [],
     appointments: {}
-    // spots: 0
   });
 
   useEffect(() => {
@@ -25,9 +24,9 @@ export default function useApplicationData() {
 
 
   function updateSpots(id, interview) {
-    console.log('id', id, 'interview', interview)
-    const days = [...state.days];
 
+    const days = [...state.days];
+    // eslint-disable-next-line
     const getDayOfInterview = days.filter(day => {
       for (let appointment of day.appointments) {
         if (appointment === id) {
