@@ -9,7 +9,7 @@ The front-end is using React, with Normalize.css, classnames and Babel. Componen
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command. 
-3. If not installed, fork and clone the scheduler_api and follow instructions in README for database setup.
+3. If not installed, fork and clone the scheduler_api at https://github.com/lighthouse-labs/scheduler-api and follow instructions in README for database setup.
 4. Start the database server using the scheduler_api which will open at http://localhost:8001.
 5. In a different terminal, start the web server using the `npm start` command. The app will be served at http://localhost:8000/.
 6. Go to http://localhost:8000/ in your browser.
