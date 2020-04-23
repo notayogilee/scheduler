@@ -25,7 +25,7 @@ npm run storybook
 
 Main layout with a couple of appointments
 !['Main layout with a couple of appointments']
-(https://github.com/notayogilee/scheduler/blob/master/Screenshots/Layout.png)
+(https://github.com/notayogilee/scheduler/blob/master/Screenshots/Layout.resized.png)
 
 User creating an appointment
 
