@@ -21,7 +21,7 @@ npm test
 
 npm run storybook
 
-##ScreenShots
+## ScreenShots
 
 Main layout with a couple of appointments
 
