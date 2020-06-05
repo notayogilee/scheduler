@@ -6,7 +6,7 @@ export default function Form(props) {
 
   const [interviewer, setInterviewer] = useState(props.interviewer || null)
   const [name, setName] = useState(props.name || '')
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   function save() {
     validate(name);
@@ -24,13 +24,13 @@ export default function Form(props) {
 
   function validate() {
     if (name === '') {
-      setError("Student name cannot be blank");
+      setError('Student name cannot be blank');
       return;
     } else if (!interviewer) {
-      setError("Please select an interviewer");
+      setError('Please select an interviewer');
       return;
     }
-    setError("");
+    setError('');
     props.onSave(name, interviewer);
   }
 
@@ -46,8 +46,6 @@ export default function Form(props) {
             onChange={event => {
               setName(event.target.value);
             }}
-
-
           />
         </form>
 
@@ -61,6 +59,6 @@ export default function Form(props) {
           <Button confirm onClick={save}>Save</Button>
         </section>
       </section>
-    </main >
+    </main>
   )
 }

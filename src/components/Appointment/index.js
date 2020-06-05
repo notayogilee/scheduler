@@ -31,15 +31,7 @@ export default function Appointment(props) {
 
   function onCancel() {
     back();
-  }
-
-  // function delayShow() {
-  //   transition(SHOW);
-  // }
-
-  // function delayEmpty() {
-  //   transition(EMPTY);
-  // }
+  };
 
   function save(name, interviewer) {
 
@@ -54,12 +46,11 @@ export default function Appointment(props) {
       .bookInterview(props.id, interview)
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true))
-
-  }
+  };
 
   function confirm() {
     transition(CONFIRM);
-  }
+  };
 
   function destroy(event) {
     transition(DELETING, true);
@@ -68,12 +59,11 @@ export default function Appointment(props) {
       .cancelInterview(props.id)
       .then(() => transition(EMPTY))
       .catch(error => transition(ERROR_DELETE, true))
-
-  }
+  };
 
   function edit() {
     transition(EDIT);
-  }
+  };
 
   return (
 

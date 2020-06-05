@@ -13,6 +13,9 @@ export function getAppointmentsForDay(state, day) {
     //just to make things easier -target the appointments
     const filteredDaysAppointments = filteredDays[0].appointments;
 
+    console.log('filtered Days App', filteredDaysAppointments)
+    console.log('state days appp', state.appointments)
+
     //loop through array
     for (let filteredDaysAppointment of filteredDaysAppointments) {
       //loop through object
@@ -71,6 +74,5 @@ export function getInterviewersForDay(state, day) {
       }
     }
   }
-
   return interviewersForDay;
 };

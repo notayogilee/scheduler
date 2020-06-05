@@ -31,8 +31,8 @@ export default function Application(props) {
         cancelInterview={cancelInterview}
       />
     );
-  }
-  )
+  })
+
 
   return (
     <main className="layout">
